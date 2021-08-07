@@ -1,0 +1,9 @@
+REM WRITTEN BY NIKOLAS COLEMAN 2021
+@ECHO OFF
+CLS
+SET /P DECODE="BASE 64 TEXT TO DECODE: "
+CLS
+powershell "[Text.Encoding]::UTF8.GetString([convert]::FromBase64String(\"%DECODE%\"))"
+PAUSE
+TIMEOUT /T 180
+EXIT
